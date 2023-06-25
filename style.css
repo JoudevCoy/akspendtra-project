@@ -1,0 +1,412 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none; /* mereset tampilan web bagian teks*/
+  list-style: none;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  width: 100%;
+  color: #fff;
+  font-family: 'Mitr', sans-serif;
+  background-color: #1f5063;
+}
+
+
+
+@font-face{
+  font-family: "budbug";
+  src: url('budbug-webfont.woff');
+}
+
+
+header {
+  width: 100%;
+  transition: opacity .3s linear;
+  animation: slidedDown .7s ease-in-out;
+}
+
+@keyframes slidedDown {
+
+  from { transform: translateY(-100%) }
+  to { transform: translateY(0%) }
+  
+}
+
+header .nav {
+  width: 100%;
+  height: 55px;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 13px;
+  position: fixed;
+  top: 0;
+  background: #3d89a7;
+  box-shadow: 0 10px 20px 5px #00000023;
+  border-bottom: 1px solid #1f5063;
+  z-index: 999;
+}
+
+header .nav .navbar-brand {
+  font-family: 'budbug', serif;
+  font-size: 28px;
+  margin-left: 2rem;
+  letter-spacing: 4px;
+  color: #c5dde2;
+  filter: drop-shadow(0 0 5px #1f5063);
+  text-shadow: 1px 1px black;
+  cursor: pointer;
+  user-select: none;
+}
+
+header .nav .btn-navbar {
+  display: none;
+}
+
+header .nav .navbar {
+  width: 100%;
+  text-align: right;
+}
+
+header .nav .navbar li {
+  display: inline;
+  margin: 5px 20px;
+  text-align: center;
+}
+
+header .nav .navbar li .navbar-link {
+  color: #c5dde2;
+  width: 40px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  transition: all .4s ease-in-out;
+}
+
+header .nav .navbar .navbar-link:hover {
+  color: #9ebac5;
+  font-size: 15px;
+  margin-bottom: -15px;
+  transform: translate(-15px);
+  -o-transform: translate(-15px);
+  -moz-transform: translate(-15px);
+}
+
+header .land-img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  margin-top: 9vh;
+  filter: brightness(0.2) blur(0.8px);
+  border-radius: 0;
+}
+
+header section {
+  position: absolute;
+  top: 200px;
+  width: 100%;
+  padding: 0 45px;
+  text-align: center;
+}
+
+header section h2 {
+  color: #c5dde2;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  filter: drop-shadow(0 0 5px black);
+}
+
+header section small {
+  color: #c5c5c5;
+  font-weight: lighter;
+}
+
+header section b {
+  color: white;
+  text-transform: capitalize;
+}
+
+
+
+/* bagian Konten */
+
+img {
+  box-shadow: 5px 7px 15px 5px #00000063;
+  border-radius: 8px;
+}
+
+.content-title {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  padding: 0 40px;
+  margin-top: 100vh;
+}
+
+.angkatan-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.angkatan-wrap .angkatan {
+  width: 790px;
+  text-align: center;
+}
+
+.angkatan div {
+  margin-top: 35px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.angkatan div img {
+  width: 45%;
+}
+
+#f-kelas, #f-osis {
+  margin-top: 100vh;
+}
+
+.kelas-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.kelas-wrap .kelas {
+  width: 800px;
+  text-align: center;
+}
+
+.kelas .img-wrap div {
+  margin-top: 120px;
+}
+
+.kelas .img-wrap  h2 {
+  margin-bottom: 20px;
+}
+
+.kelas .img-wrap img {
+  width: 90%;
+}
+
+
+
+/* Bagian Foto Osis */
+.osis-wrap {
+  display: flex;
+}
+
+.osis {
+  text-align: center;
+  width: 100%;
+}
+
+.osis > .div-wrap {
+  width: 100%;
+  margin-top: 200px;
+}
+
+.osis > .div-wrap div:nth-child(odd) {
+  background: #00000023;
+}
+
+.osis > .div-wrap div {
+  width: 100%;
+  margin-top: 50px;
+  padding: 30px 0;
+  border-radius: 15px;
+}
+.osis > .div-wrap div img {
+  width: 25%;
+  margin: 0 30px;
+}
+
+
+
+/* Bagian Footer */
+footer {
+  margin-top: 60vh;
+  width: 100%;
+  height: 96vh;
+  padding-top: 4vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: #00000063;
+}
+
+footer h1 {
+  color: #3d89a7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* bagian tablet dan handphone */
+@media only screen and (max-width: 830px){
+  header .nav {
+    position: static;
+  }
+  header .nav .navbar {
+    position: absolute;
+    transform: translateY(40px);
+    background: #357a96;
+    box-shadow: 0 10px 20px 5px #00000023;
+    z-index: 998;
+    height: 0;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+    border: none;
+  }
+  header .nav .navbar-active {
+    border-bottom: 1px solid #1f5063;
+    height: 100px;
+  }
+  header .nav .navbar li {
+    display: block;
+  }
+  header .nav .btn-navbar {
+    display: block;
+    font-size: 25px;
+  }
+
+  header .land-img {
+    margin-top: 0;
+  }
+
+  .content-title {
+    font-size: 23px;
+  }
+  
+
+  /* Bagian Angkatan */
+  .angkatan div img {
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  /* Bagian Foto Kelas 9 */
+
+  .kelas .img-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .kelas .img-wrap div {
+    width: 500%;
+    display: flex;
+    flex: 1 3 200px;
+  }
+  .kelas .img-wrap div img {
+    width: 50%;
+  }
+  .kelas .img-wrap div h2 {
+    font-size: 19px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    width: 100%;
+  }
+
+
+  /* Bagian Foto Osis */
+  .osis-wrap {
+    display: block;
+  }
+  
+  .osis {
+    width: 100%;
+  }
+  
+  .osis > .div-wrap {
+    margin-top: 200px;
+  }
+  
+  .osis > .div-wrap div:nth-child(odd) {
+    background: #00000023;
+  }
+  
+  .osis > .div-wrap div {
+    width: 100%;
+    margin-top: 50px;
+    padding: 30px 0;
+    border-radius: 15px;
+  }
+  .osis > .div-wrap div img {
+    width: 90%;
+    margin: 25px 30px;
+  }
+
+  /* Bagian Footer */
+  footer {
+    height: 100vh;
+  }
+
+}
+
+
+
+
+
+
+
+
+/* Optimasi */
+
+@media only screen and (max-width: 300px){
+  header section h2 {
+    color: #c5dde2;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    filter: drop-shadow(0 0 5px black);
+  }
+  header .nav .navbar-brand {
+    font-size: 20px;
+    letter-spacing: normal;
+  }
+  .angkatan div img {
+    width: 130%;
+    margin-top: 10px;
+  }
+  header .nav .btn-navbar {
+    font-size: 18px;
+    margin-top: 5px;
+  }
+}
+
+@media only screen and (min-width: 830px) and (max-width: 865px){
+  .osis > .div-wrap {
+    justify-content: center;
+  }
+  .osis > .div-wrap div {
+    display: flex;
+    margin-top: 50px;
+    padding: 30px 0;
+    border-radius: 15px;
+  }
+}
+
+
+
